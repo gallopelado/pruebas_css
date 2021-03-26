@@ -1,0 +1,131 @@
+
+.agentes, .intraoperatorio, .medicamentos {
+    width: 68.5rem;
+}
+
+.titulo_tabla {
+    text-align: center;
+    background: blanchedalmond;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.titulo_tabla:nth-child(1n) {
+    border-top: 1px solid black;
+}
+
+#radio_frecuencia_respiratoria {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#radio_frecuencia_respiratoria label {
+    display: block;
+}
+#radio_frecuencia_respiratoria #itFrecuenciaRespiratoria {
+    margin-bottom: 1rem;
+}
+
+#radio_ventilacion_asistida {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#radio_ventilacion_asistida div {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#block_soluciones {
+    text-align: center;
+    margin: 1rem 0rem 1rem 1rem;
+}
+
+#block_soluciones div {
+    margin-bottom: 1rem;
+}
+
+#block_soluciones #itSolucionTipo, #itSagreDerivadoTipo {
+    margin-left: 2.9rem;
+}
+
+.block_dosis {
+    text-align: center;
+    margin: 1rem 0rem 1rem 1rem;
+}
+
+/* Se escoge el primer elemento */
+.block_dosis:nth-child(1n) {
+    text-align: center;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.intraoperatorio table, .agentes table, .medicamentos table {
+    width: 68.5rem;
+}
+
+.agentes input {
+    width: 8rem;
+    margin: 1.5rem 10rem 1.5rem 10rem;
+}
+
+#tiempo_actual {
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.presion_arterial, .pulso_to_diuresis {
+    width: 8rem;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.primer_th {
+    width: 20rem;
+}
+
+.segundo_th {
+    width: 20rem;
+}
+
+.tabla_estilo {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+   
+}
+
+.tabla_estilo tr:hover {
+    background-color: #f2f2f2;
+}
+
+.tabla_estilo tr, th, td {
+    /*border: 1px solid black;*/
+    border: 1px solid #ddd;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.botones-finalizar, .botones-inicio, .seccion-guardar {
+    /*border: 1px solid black;*/
+    width: 68.5rem;
+    text-align: center;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.botones-finalizar button, .botones-inicio button {
+    width: 30rem;
+    background: #eaeaea;
+}
+
+.seccion-guardar button {
+    width: 30rem;
+}
+
+.botones-finalizar .boton_anestesia, .botones-inicio .boton_anestesia{
+    margin-left: -1.2rem;
+}
+
+.botones-finalizar .boton_cirugia, .botones-inicio .boton_cirugia{
+    margin-left: 3.2rem;
+}
+

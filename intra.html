@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRA</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="botones-inicio">
+            <button class="btn btn-default boton_anestesia"type="btInicioAnestesia">INICIO DE LA ANESTESIA</button>
+            <button class="btn btn-default boton_cirugia"type="btInicioCirugia">INICIO DE LA CIRUGÍA</button>
+        </div>
+        <div class="agentes">
+            <div class="titulo_tabla">
+                <span>Agentes</span>
+            </div>
+            <table class="tabla_estilo">
+                <thead>
+                    <tr>
+                        <th class="primer_th"></th>
+                        <th class="segundo_th centrado">Valor anterior (Timestamp)</th>
+                        <th class="centrado">Valor Actual</th>
+                    </tr>
+                </thead>
+                <tbody class="centrado">
+                    <tr>
+                        <td>OXÍGENO(L/min)</td>
+                        <td></td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>OXIDO NITROSO(L/min)</td>
+                        <td></td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>ISOFLURANO (%)</td>
+                        <td></td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>SEVOFLURANO (%)</td>
+                        <td></td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>DESFLURANO (%)</td>
+                        <td></td>
+                        <td><input type="number"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="intraoperatorio">
+            <div class="titulo_tabla">
+                <span>Registro Intraoperatorio</span>
+            </div>
+            <table class="tabla_estilo">
+                <thead>
+                    <tr>
+                        <th class="primer_th"></th>
+                        <th class="segundo_th centrado">Valor anterior (Timestamp)</th>
+                        <th class="centrado">Valor Actual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="centrado">
+                        <td>Tiempo actual</td>
+                        <td></td>
+                        <td><input type="datetime-local" id="tiempo_actual"></td>
+                    </tr>
+                    <tr class="centrado">
+                        <td>Presión arterial (PAS/PAD)</td>
+                        <td></td>
+                        <td><input type="number" class="presion_arterial">/<input type="number" class="presion_arterial"></td>
+                    </tr>
+                    <tr class="centrado">
+                        <td>Pulso (lpm)</td>
+                        <td></td>
+                        <td><input type="number" class="pulso_to_diuresis"></td>
+                    </tr>
+                    <tr class="centrado">
+                        <td>Saturación O2(%)</td>
+                        <td></td>
+                        <td><input type="number" class="pulso_to_diuresis"></td>
+                    </tr>
+                    <tr class="centrado">
+                        <td>EtCO2(mm/Hg)</td>
+                        <td></td>
+                        <td><input type="number" class="pulso_to_diuresis"></td>
+                    </tr>
+                    <tr class="centrado">
+                        <td>Diuresis(mL)</td>
+                        <td></td>
+                        <td><input type="number" class="pulso_to_diuresis"></td>
+                    </tr>
+                    <tr class="centrado">
+                        <td>Ventilación espontánea</td>
+                        <td></td>
+                        <td>
+                            <div id="radio_frecuencia_respiratoria">
+                                <input type="radio" name="irFrecuenciaRespiratoria" id="">No
+                                <input type="radio" name="irFrecuenciaRespiratoria" id="">Si
+                                <label>Frecuencia Respiratoria:</label>
+                                <input type="text" id="itFrecuenciaRespiratoria">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="centrado">Ventilación asistida</td>
+                        <td></td>
+                        <td>
+                            <div id="radio_ventilacion_asistida">
+                                <input type="radio" name="irModo">No
+                                <input type="radio" name="irModo">Si
+                                <div>
+                                    <label for="itModo">Modo:</label>
+                                    <input type="text"  name="volumen_asistida" id="itModo">
+                                </div>
+                                <hr>
+                                <div>
+                                    <label for="itVolumenCorriente">Volumen Corriente(Tidal):</label>
+                                    <input type="text" name="volumen_asistida" id="itVolumenCorriente">
+                                </div>
+                                <hr>
+                                <div>
+                                    <label for="itVFrecuenciaRespiratoria">Frecuencia Respiratoria:</label>
+                                    <input type="text" name="volumen_asistida" id="itVFrecuenciaRespiratoria">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="centrado">Soluciones</td>
+                        <td></td>
+                        <td>
+                            <div id="block_soluciones">
+                                <div>
+                                    <label for="itSolucionTipo">Tipo:</label>
+                                    <input type="text" name="" id="itSolucionTipo">
+                                </div>
+                                <hr>
+                                <div>
+                                    <label for="itSolucionVolumen">Volumen:</label>
+                                    <input type="text" name="" id="itSolucionVolumen">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="centrado">Sangre y derivados</td>
+                        <td></td>
+                        <td>
+                            <div id="block_soluciones">
+                                <div>
+                                    <label for="itSagreDerivadoTipo">Tipo:</label>
+                                    <input type="text" name="" id="itSagreDerivadoTipo">
+                                </div>
+                                <hr>
+                                <div>
+                                    <label for="itSagreDerivadoVolumen">Volumen:</label>
+                                    <input type="text" name="" id="itSagreDerivadoVolumen">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="medicamentos">
+            <div class="titulo_tabla">
+                <span>Agentes</span>
+            </div>
+            <table class="tabla_estilo">
+                <thead>
+                    <tr>
+                        <th class="primer_th"></th>
+                        <th class="segundo_th">Valor anterior (Timestamp)</th>
+                        <th>Valor Actual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="block_dosis">
+                                <input type="text" id="cod_medicamento">
+                            </div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="block_dosis">
+                                <label for="">Dosis:</label>
+                                <input type="text" id="itDosis">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="botones-finalizar">
+            <button class="btn btn-default boton_anestesia" type="button" id="btFinAnestesia">FIN DE LA ANESTESIA</button>
+            <button class="btn btn-default boton_cirugia" type="button" id="btFinCirugia">FIN DE LA CIRUGÍA</button>
+        </div>
+        <div class="seccion-guardar">
+            <button class="btn btn-primary">GUARDAR</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
