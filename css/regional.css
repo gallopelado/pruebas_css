@@ -1,0 +1,57 @@
+.block_regional_radios {
+    display: inline-grid;
+}
+
+.block_regional_radios div {
+    margin-left: 25rem;
+}
+
+.block_nervioso_eco_radios {
+    display: inline-grid;
+}
+
+.block_nervioso_eco_radios div {
+    margin-left: 12.3rem;
+}
+
+.block_parietal_radios {
+    display: inline-grid;
+}
+
+.block_parietal_radios div {
+    margin-left: 20.8rem;
+}
+
+.block_peribulbar_radios {
+    display: inline-grid;
+}
+
+.block_peribulbar_radios div {
+    margin-left: 19rem;
+}
+
+.aguja_raq {
+    margin-bottom: 1rem;
+    margin-left: 8.3rem;
+}
+
+.espacio_raq {
+    margin-left: 10rem;
+    margin-bottom: 1rem;
+}
+.droga_raq {
+    margin-left: 7.1rem;
+}
+
+.concentracion_peribular {
+    margin-left: 5.7rem;
+    margin-bottom: 1rem;
+}
+.drogas_peribular {
+    margin-left: 2.3rem;
+}
+
+.tipo_bloque_ecog {
+    margin-left: 12.4rem;
+    margin-bottom: 1rem;
+}
