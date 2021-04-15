@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRA</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    
+
+    <div class="container">
+
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <button class="btn btn-primary"type="btInicioAnestesia">INICIO DE LA ANESTESIA</button>
+                <button class="btn btn-primary"type="btInicioCirugia">INICIO DE LA CIRUGÍA</button>
+            </div>
+            <div class="panel-body">
+
+                <!-- Agentes -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Agentes</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">Descripción <span class="label label-default">(Unidad)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Actual" disabled>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Anterior" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">OXÍGENO <span class="label label-default">(L/min)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">OXIDO NITROSO <span class="label label-default">(L/min)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">ISOFLURANO <span class="label label-default">(%)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">SEVOFLURANO <span class="label label-default">(%)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">DESFLURANO <span class="label label-default">(%)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer text-center">
+                        <button class="btn btn-primary btn-block">GUARDAR</button>
+                    </div>
+                </div>
+                <!-- Fin agentes -->
+
+                <!-- Registro Intraoperatorio -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Registro Intraoperatorio</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">Descripción <span class="label label-default">(Unidad)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Actual" disabled>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Anterior" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">Tiempo actual</label>
+                                <div class="col-sm-2">
+                                    <input type="datetime-local" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="datetime-local" class="form-control" id="inputEmail3" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Presión arterial (PAS/PAD)</label>
+                                <div class="col-sm-1">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-1">
+                                    <span>/</span>
+                                </div>
+                                <div class="col-sm-1">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-1">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                                <div class="col-sm-1">
+                                    <span>/</span>
+                                </div>
+                                <div class="col-sm-1">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">ISOFLURANO <span class="label label-default">(%)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">SEVOFLURANO <span class="label label-default">(%)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">DESFLURANO <span class="label label-default">(%)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer text-center">
+                        <button class="btn btn-primary btn-block">GUARDAR</button>
+                    </div>
+                </div>
+                <!-- Fin Registro Intraoperatorio -->
+
+                <!-- Medicamentos -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Medicamentos Administrada</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label ">Descripción <span class="label label-default">(Unidad)</span></label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Actual" disabled>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Anterior" disabled>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer text-center">
+                        <button class="btn btn-primary btn-block">GUARDAR</button>
+                    </div>
+                </div>
+                <!-- Fin Medicamentos -->
+
+            </div>
+            <div class="panel-footer text-center">
+                <button class="btn btn-primary" type="button" id="btFinAnestesia">FIN DE LA ANESTESIA</button>
+                <button class="btn btn-primary" type="button" id="btFinCirugia">FIN DE LA CIRUGÍA</button>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
