@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table design 2</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap-3.2/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bower_components/font-awesome-5/css/all.min.css">
+    <link rel="stylesheet" href="./css/registro_medicacion copy.css">
+</head>
+<body>
+    
+    <div class="container pt-5">
+
+        <div class="row">
+            <div class="col col-md-1">
+                <i class="fas fa-arrow-left fa-5x"></i>
+            </div>
+            <div class="col col-md-10 text-center">
+                <h3>Hoja REGISTRO DE MEDICACIÓN</h3>
+                <h3>H.R. - VILLARRICA</h3>
+            </div>
+            <div class="col col-md-1">
+                <i class="fas fa-arrow-right fa-5x"></i>
+            </div>
+        </div>
+        <div class="">
+            <input id="txtSearch" type="text" placeholder="Buscar..">
+            <br><br>
+            <table class="table table-striped" id="tabla_registro_cabecera">
+                <thead>
+                    <tr class="titulo_medicamento_head">
+                        <td class="titulo_medicamento_head">Medicamentos</td>
+                        <td class="titulo_dias_semana">2/5</td>
+                        <td class="titulo_dias_semana">3/5</td>
+                        <td class="titulo_dias_semana">4/5</td>
+                        <td class="titulo_dias_semana">5/5</td>
+                        <td class="titulo_dias_semana">6/5</td>
+                        <td class="titulo_dias_semana">7/5</td>
+                        <td class="titulo_dias_semana">8/5</td>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table table-bordered table-hover" id="tabla_registro">
+                <tbody>
+                    <tr>
+                        <td class="medicamentos_td">
+                            <div>
+                                <div class="titulo_medicamento">
+                                    SOLUCION DEXTROSA (10 %)
+                                </div>
+                                <div>Dosis: 4</div>
+                                <div>Cada: 12 Hora(s)</div>
+                                <div>Inicio: 05/05/21 Fin: 08/05/21</div>
+                            </div>
+                        </td>
+                        <td class="horario_td"></td>
+                        <td class="horario_td"></td>
+                        <td class="horario_td"></td>
+                        <td class="horario_td"></td>
+                        <td class="horario_td"></td>
+                        <td class="horario_td"></td>
+                        <td class="horario_td"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./bower_components/Jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap-3.2/dist/js/bootstrap.js"></script>
+    <script src="./js/registro_app copy.js"></script>
+</body>
+</html>

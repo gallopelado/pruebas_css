@@ -1,0 +1,50 @@
+/* Alineando tabla */
+
+tbody {
+    display: block;
+    height: 45rem;
+    overflow: auto;
+}
+#tabla_registro thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;/* even columns width , fix width of table too*/
+}
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+/* table {
+    width: 400px;
+} */
+/***/
+
+.titulo_dias_semana {
+    text-align: center;
+    font-weight: bold;
+}
+
+.medicamentos_td {    
+    padding: 2.5% 1% 2.5% 2.5% !important;
+}
+
+.titulo_medicamento {
+    color: blue;
+}
+
+.titulo_medicamento_head {
+    background-color: aliceblue;
+    text-align: center;
+    width: 24.3rem;
+    font-weight: bold;
+}
+
+.horario_td {
+    background-color: #6f647b!important;
+    width: 10%;
+}
+
+.horarios {
+    text-align: center;
+    font-weight: bold;
+    color: #6f647b!important;
+}
