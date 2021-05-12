@@ -35,8 +35,10 @@ $(document).ready(function(){
         });
         console.log(calcularTodosDiasMes("2021-05-12T16:05"));
         console.log(otroCalculoDiasAnio("2021-05-12T16:05"));
+        console.log(semanaActual("2021-05-12T16:05"));
         //console.log(generarSemana("2021-05-11T16:05"));
         //console.log(generarSemana(mutarFecha("plus", "2021-05-11T16:05")));
+        setSemanaActualTableHeader();
 
         $('#avanzarDerecha').on("click", function(e) {
             e.preventDefault();
@@ -49,14 +51,13 @@ $(document).ready(function(){
                 const sigt_semana = mutarFecha("plus", fecha_actual);
                 sessionStorage.setItem('fecha_modificada', sigt_semana);
                 console.log(generarSemana(sigt_semana));
+                setSemanaActualTableHeader(generarSemana(sigt_semana));
             } else if(sessionStorage.getItem('fecha_modificada')) {
-                
                 const fecha_modificada = sessionStorage.getItem('fecha_modificada');
-                
-                
                 const sigt_semana = mutarFecha("plus", fecha_modificada);
                 sessionStorage.setItem('fecha_modificada', sigt_semana);
                 console.log(generarSemana(sigt_semana));
+                setSemanaActualTableHeader(generarSemana(sigt_semana));
             }
 
             //console.log(generarSemana(mutarFecha("plus", "2021-05-11T16:05")));
@@ -71,11 +72,13 @@ $(document).ready(function(){
                 const sigt_semana = mutarFecha("plus", fecha_actual);
                 sessionStorage.setItem('fecha_modificada', sigt_semana);
                 console.log(generarSemana(sigt_semana));
+                setSemanaActualTableHeader(generarSemana(sigt_semana));
             } else if(sessionStorage.getItem('fecha_modificada')) {
                 const fecha_modificada = sessionStorage.getItem('fecha_modificada');
                 const sigt_semana = mutarFecha("minus", fecha_modificada);
                 sessionStorage.setItem('fecha_modificada', sigt_semana);
                 console.log(generarSemana(sigt_semana));
+                setSemanaActualTableHeader(generarSemana(sigt_semana));
             }
         });
 });
@@ -175,4 +178,27 @@ const otroCalculoDiasAnio = (fecha_actual) => {
       }
     }
     return lista;
+}
+
+const semanaActual = (fecha_actual) => {
+    const v_date = luxon.DateTime.fromISO(fecha_actual);
+    const nro_semana = luxon.DateTime.local(v_date.year, v_date.month, v_date.day).weekNumber;
+    return otroCalculoDiasAnio(fecha_actual).filter( item => item.currentWeek === nro_semana );
+}
+
+const setSemanaActualTableHeader = (listaSemana) => {
+    if(!listaSemana) {
+        const fecha_actual = "2021-05-12T16:05";
+        const semanaActualLista = semanaActual(fecha_actual);
+        renderSemana(semanaActualLista);
+    } else {
+        const semanaActualLista = listaSemana;
+        renderSemana(semanaActualLista);
+    }
+}
+
+const renderSemana = (semanaActualLista) => {
+    $('.titulo_dias_semana').each(function(k,v) {
+        $(v).html( `${semanaActualLista[k].nroDia}/${semanaActualLista[k].nroMes}` ).delay("slow").fadeOut().fadeIn()
+    });
 }
