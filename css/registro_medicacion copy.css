@@ -2,7 +2,7 @@
 
 tbody {
     display: block;
-    height: 45rem;
+    height: 70rem;
     overflow: auto;
 }
 #tabla_registro thead, tbody tr {
@@ -23,6 +23,11 @@ thead {
     font-weight: bold;
 }
 
+.titulo_dias_hoy {
+    text-align: center;
+    font-weight: bold;
+}
+
 .medicamentos_td {    
     padding: 2.5% 1% 2.5% 2.5% !important;
 }
@@ -34,12 +39,12 @@ thead {
 .titulo_medicamento_head {
     background-color: aliceblue;
     text-align: center;
-    width: 24.3rem;
+    width: 32.3rem;
     font-weight: bold;
 }
 
 .horario_td {
-    background-color: #6f647b!important;
+    background-color: #9ab6cd!important;
     width: 10%;
 }
 
@@ -47,4 +52,18 @@ thead {
     text-align: center;
     font-weight: bold;
     color: #6f647b!important;
+}
+
+/* Contenedor detalle medicamento */
+.contenedor_detalle_medicamento {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.box_detalle_medicamento {
+    text-align: center;
+}
+
+.contenedor_detalle_medicamento:hover {
+    background-color: aliceblue;
 }

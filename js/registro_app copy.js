@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
     sessionStorage.setItem('semana_modificada_numero', '');
     sessionStorage.setItem('fecha_modificada', '');
         const row_model = (rn) => `
@@ -18,7 +18,7 @@ $(document).ready(function(){
         <td class="horario_td"></td>
         <td class="horario_td"></td>
         <td class="horario_td"></td>
-        <td class="horario_td" style="${ rn >= 0.1 && rn <= 0.5 ? 'background: #ffe8bf!important' : '' }">${ rn >= 0.1 && rn <= 0.5 ? '<div class="horarios"><div>11:00</div><div>18:00</div></div>' : '' }</td>
+        <td class="horario_td" style="${ rn >= 0.1 && rn <= 0.5 ? 'background: #ffe8bf!important' : '' }">${ rn >= 0.1 && rn <= 0.5 ? '<div class="horarios"><div><label name="linkHorario" data-toggle="popover" data-placement="auto" title="Medicamento" data-content="'+mensajeDetalleTooltip()+'">11:00</label></div></div>' : '' }</td>
         <td class="horario_td"></td>
         </tr>
         `;
@@ -36,9 +36,12 @@ $(document).ready(function(){
         console.log(calcularTodosDiasMes("2021-05-12T16:05"));
         console.log(otroCalculoDiasAnio("2021-05-12T16:05"));
         console.log(semanaActual("2021-05-12T16:05"));
+        showFilaDetalle();
         //console.log(generarSemana("2021-05-11T16:05"));
         //console.log(generarSemana(mutarFecha("plus", "2021-05-11T16:05")));
         setSemanaActualTableHeader();
+        setToday();
+        $('[data-toggle="popover"]').popover({html: true})
 
         $('#avanzarDerecha').on("click", function(e) {
             e.preventDefault();
@@ -106,18 +109,18 @@ $(document).ready(function(){
 
     const calcularMes = (numberMonth) => {
         switch(numberMonth){
-            case 1: return "Ene"
-            case 2: return "Feb"
-            case 3: return "Mar"
-            case 4: return "Abr"
-            case 5: return "May"
-            case 6: return "Jun"
-            case 7: return "Jul"
-            case 8: return "Ago"
-            case 9: return "Sep"
-            case 10: return "Oct"
-            case 11: return "Nov"
-            case 12: return "Dic"
+            case 1: return "Enero"
+            case 2: return "Febrero"
+            case 3: return "Marzo"
+            case 4: return "Abril"
+            case 5: return "Mayo"
+            case 6: return "Junio"
+            case 7: return "Julio"
+            case 8: return "Agosto"
+            case 9: return "Septiembre"
+            case 10: return "Octubre"
+            case 11: return "Noviembre"
+            case 12: return "Diciembre"
         }
     }
 
@@ -142,7 +145,6 @@ const calcularTodosDiasMes = (fecha_actual) => {
 const generarSemana = (fecha_actual) => {
     const v_date = luxon.DateTime.fromISO(fecha_actual);
     const v_current_week_number = luxon.DateTime.local(v_date.year, v_date.month, v_date.day).weekNumber;
-    //return calcularTodosDiasMes(fecha_actual).filter( item => item.currentWeek === v_current_week_number );
     return otroCalculoDiasAnio(fecha_actual).filter( item => item.currentWeek === v_current_week_number );
 }
 
@@ -198,7 +200,51 @@ const setSemanaActualTableHeader = (listaSemana) => {
 }
 
 const renderSemana = (semanaActualLista) => {
+    const fecha_actual = "2021-05-13T16:05";
+    const v_date = luxon.DateTime.fromISO(fecha_actual);
     $('.titulo_dias_semana').each(function(k,v) {
-        $(v).html( `${semanaActualLista[k].nroDia}/${semanaActualLista[k].nroMes}` ).delay("slow").fadeOut().fadeIn()
+        $('#tituloMesAnio').html(`${semanaActualLista[k].nombreMes} - ${semanaActualLista[k].currentyear}`);
+        if(semanaActualLista[k].nroDia === v_date.day && semanaActualLista[k].nroMes === v_date.month) {
+            $('.titulo_dias_hoy').eq(k).html('<i class="fas fa-calendar-day"></i> HOY');
+        } else {
+            $('.titulo_dias_hoy').eq(k).empty();
+        }
+        $(v).html( `${semanaActualLista[k].nroDia}/${semanaActualLista[k].nombreDia}` ).delay("slow").fadeOut().fadeIn()
     });
 }
+
+const eliminarFilaDetalle = () => {
+    $('i[name=cerrarDetalle]').on('click', function(e){
+        $(this).parents('tr').remove();
+    });
+}
+
+const showFilaDetalle = () => {
+    $('label[name=linkHorario]').on('mouseover', function(e){
+        $(this).popover('show');
+    }) .on('mouseleave', function(){
+        $(this).popover('hide');
+    });
+}
+
+const setToday = () => {
+    $('#btIrHoy').on('click', function() {
+        const fecha_actual = "2021-05-12T16:05";
+        const semanaActualLista = semanaActual(fecha_actual);
+        renderSemana(semanaActualLista);
+    });
+}
+
+const mensajeDetalleTooltip = () => `
+<h5><u><strong>SOLUCION DEXTROSA (10 %)</strong></u></h5>
+<strong>Via:</strong>
+<p>Oral</p>
+<strong>Cantidad:</strong>
+<p>4</p>
+<strong>Tiempo de Ejecución:</strong>
+<p>08:12:39 05/05/21</p>
+<strong>Ejecutor por:</strong>
+<p>Ariel Amin Amarilla Martinez</p>
+<strong>Observación:</strong>
+<p>Esta bien!!</p>
+`

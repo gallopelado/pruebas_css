@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table design 2</title>
-    <link rel="stylesheet" href="./bower_components/bootstrap-3.2/dist/css/bootstrap.css">
+   <link rel="stylesheet" href="./bower_components/boostrap-3.4.1/bootstrap.min.css">
     <link rel="stylesheet" href="./bower_components/font-awesome-5/css/all.min.css">
     <link rel="stylesheet" href="./css/registro_medicacion copy.css">
 </head>
@@ -18,17 +18,29 @@
                 <i class="fas fa-arrow-left fa-5x" id="avanzarIzquierda"></i>
             </div>
             <div class="col col-md-10 text-center">
-                <h3>Hoja REGISTRO DE MEDICACIÓN</h3>
-                <h3>H.R. - VILLARRICA</h3>
+                <h3>Hoja REGISTRO DE MEDICACIÓN - H.R. - VILLARRICA</h3>
+                <h4 id="tituloMesAnio"></h4>
             </div>
             <div class="col col-md-1">
                 <i class="fas fa-arrow-right fa-5x" id="avanzarDerecha"></i>
             </div>
         </div>
-        <div class="">
-            <input id="txtSearch" type="text" placeholder="Buscar..">
+        <div class="pt-3">
+            <input id="txtSearch" type="text" placeholder="Buscar.."> <button type="button" class="btn btn-primary btn-sm" id="btIrHoy"><i class="fas fa-calendar-day"></i> Ir hoy</button>
             <br><br>
             <table class="table table-striped" id="tabla_registro_cabecera">
+                <thead>
+                    <tr class="">
+                        <td class="titulo_medicamento_head_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                    </tr>
+                </thead>
                 <thead>
                     <tr class="titulo_medicamento_head">
                         <td class="titulo_medicamento_head">Medicamentos</td>
@@ -70,7 +82,8 @@
     </div>
 
     <script src="./bower_components/Jquery/dist/jquery.js"></script>
-    <script src="./bower_components/bootstrap-3.2/dist/js/bootstrap.js"></script>
+   <!--  <script src="./bower_components/bootstrap-3.2/dist/js/bootstrap.js"></script> -->
+   <script src="./bower_components/boostrap-3.4.1/bootstrap.min.js"></script>
     <script src="./bower_components/date-fns/date_fns2.min.js"></script>
     <script src="./bower_components/luxon/luxon.min.js"></script>
     <script src="./js/registro_app copy.js"></script>
