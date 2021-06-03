@@ -1,0 +1,105 @@
+/* ** grid styles' components ** */
+.panoramica-grid {
+  display: grid;
+  grid-template-columns: 15% auto;
+}
+
+.row-header-grid-left {
+  border: 1px solid black;
+  grid-row: 1 / 5;
+}
+
+.row-header-grid-right {
+  border: 1px solid black;
+}
+
+.row-area-grid-right {
+  border: 1px solid black;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: 15% auto;
+}
+
+/* ** styles' components ** */
+.date-container {
+  display: flex;
+  background-color: beige;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.item-date {
+  align-self: flex-start;
+  padding: 5px 25px 5px 10px;
+  border: 1px solid black;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.item-date-content {
+  align-self: flex-start;
+  padding: 5px 25px 5px 10px;
+  border: 1px solid black;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.item-title-fecha {
+  border: 1px solid black;
+  text-align: center;
+  flex-grow: 1;
+  padding: 1px 0 1px 0;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.des-item {
+  border: 1px solid black;
+  padding: 16px 0 16px 0;
+  text-align: center;
+}
+
+.diag-item {
+  border: 1px solid black;
+  padding: 5px 0 5px 0;
+  text-align: center;
+}
+
+/* ** Mix ** */
+#table_mix {
+    width: 100%;
+    border-collapse: collapse;
+}
+#table_mix, td, th {
+    border: 1px solid black;
+}
+
+#table_mix th {
+    padding: 5.3px 0 5px 0;
+}
+
+#table_mix td {
+    padding: 5.3px 0 5px 0;
+}
+
+.tam_celda_content_mix {
+    text-align: center;
+}
+
+/* ** table **  */
+table,
+td,
+th {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}

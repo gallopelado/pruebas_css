@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table design 2</title>
+   <link rel="stylesheet" href="./bower_components/boostrap-3.4.1/bootstrap.min.css">
+    <link rel="stylesheet" href="./bower_components/font-awesome-5/css/all.min.css">
+    <link rel="stylesheet" href="./css/registro_medicacion copy.css">
+</head>
+<body>
+    
+    <div class="container pt-5">
+
+        <div class="row">
+            <div class="col col-md-1">
+                <i class="fas fa-arrow-left fa-5x" id="avanzarIzquierda"></i>
+            </div>
+            <div class="col col-md-10 text-center">
+                <h3>Hoja PANORÁMICA DE ENFERMERÍA - H.R. - VILLARRICA</h3>
+                <h4 id="tituloMesAnio"></h4>
+            </div>
+            <div class="col col-md-1">
+                <i class="fas fa-arrow-right fa-5x" id="avanzarDerecha"></i>
+            </div>
+        </div>
+        <div class="pt-3">
+            <input id="txtSearch" type="text" placeholder="Buscar.."> <button type="button" class="btn btn-primary btn-sm" id="btIrHoy"><i class="fas fa-calendar-day"></i> Ir hoy</button>
+            <br><br>
+            <table class="table table-striped" id="tabla_registro_cabecera">
+                <thead>
+                    <tr class="">
+                        <td class="titulo_medicamento_head_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                        <td class="titulo_dias_hoy"></td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr class="titulo_medicamento_head">
+                        <td class="titulo_medicamento_head">Diagnostico</td>
+                        <td class="titulo_dias_semana">7</td>
+                        <td class="titulo_dias_semana">8</td>
+                        <td class="titulo_dias_semana">9</td>
+                        <td class="titulo_dias_semana">10</td>
+                        <td class="titulo_dias_semana">11</td>
+                        <td class="titulo_dias_semana">12</td>
+                        <td class="titulo_dias_semana">13</td>
+                        <td class="titulo_dias_semana">14</td>
+                        <td class="titulo_dias_semana">15</td>
+                        <td class="titulo_dias_semana">16</td>
+                        <td class="titulo_dias_semana">17</td>
+                        <td class="titulo_dias_semana">18</td>
+                        <td class="titulo_dias_semana">19</td>
+                        <td class="titulo_dias_semana">20</td>
+                        <td class="titulo_dias_semana">21</td>
+                        <td class="titulo_dias_semana">22</td>
+                        <td class="titulo_dias_semana">23</td>
+                        <td class="titulo_dias_semana">24</td>
+                        <td class="titulo_dias_semana">1</td>
+                        <td class="titulo_dias_semana">2</td>
+                        <td class="titulo_dias_semana">3</td>
+                        <td class="titulo_dias_semana">4</td>
+                        <td class="titulo_dias_semana">5</td>
+                        <td class="titulo_dias_semana">6</td>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table table-bordered table-hover" id="tabla_registro">
+                <tbody>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>F.C [lat/min]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>F.R[resp/min]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>P.A [mmHg]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>P.A [mmHg]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>P.A.M [mmHg]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>T.inc [&#176;C]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>T.AX [&#176;C]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>PVC [cmH<sub>2</sub>O]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>SAT.O<sub>2</sub> [%]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Llenado Capilar [seg]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Ingresos(Parenteral)</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Expans. [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Correcc. [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Comp.Sang [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan A [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan B [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan C [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan D [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan E [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan E [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan F [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan G [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan H [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan I [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan J [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan K [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan L [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan M [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan N [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan O [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Plan P [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Ingresos(Enteral)</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>V.O [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>P/Maternos [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>S.N.G/SOG [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>S.T.P [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Egresos</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Diuresis [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Heces [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Ext-Sangre [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>R. Gástrico [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Drenajes [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Drenajes Preural [Derecho][ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Drenajes Preural [Izquierdo][ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Vomitos [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Pérdida Insensible [ml]</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Balance</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Cuidados de Enfermería</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Asp./B/T:</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>HGT</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>O2</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Nebuliz</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Aerosolt</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Higiene</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Moviliz</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Estudios Auxiliares</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="">
+                            <div>
+                                <div class="">
+                                    <h4>Observaciones</h4>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./bower_components/Jquery/dist/jquery.js"></script>
+   <script src="./bower_components/boostrap-3.4.1/bootstrap.min.js"></script>
+    <script src="./bower_components/date-fns/date_fns2.min.js"></script>
+    <script src="./bower_components/luxon/luxon.min.js"></script>
+    <script src="./js/panoramica_enfermeria.js"></script>
+</body>
+</html>
