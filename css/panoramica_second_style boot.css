@@ -5,3 +5,7 @@
 #panoramica_table th, #panoramica_table td {
   text-align: center;
 }
+
+#tb_diagnosticos h4 {
+  font-weight: bold;
+}

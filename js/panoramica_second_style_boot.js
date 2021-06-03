@@ -100,14 +100,57 @@ $(function() {
     }
     
     console.log(titulos);
+    sessionStorage.clear()
+    sessionStorage.setItem('fecha_actual', '2021-06-03T16:05');
+    sessionStorage.setItem('fecha_modificada', '');
     console.log(getCalendar("2021-06-01T16:05"))
     tbodyGenerator();
+    setCurrentDay('2021-06-03T16:05');
 
     $('#txtSearch').on('keyup', function(){
         const valor = $(this).val().toLowerCase();
         $('#panoramica_table tr').filter(function(){
             $(this).toggle($(this).text().toLowerCase().indexOf(valor) > -1);
         });
+    });
+
+    $('#avanzarDerecha').on("click", function(e) {
+        if(!sessionStorage.getItem('fecha_modificada')) { 
+
+            const next_day = mutarFecha("plus", sessionStorage.getItem('fecha_actual'));
+            sessionStorage.setItem('fecha_modificada', next_day);
+            $('#headerDateShort').html(getFormatedDate(next_day));
+
+        } else if(sessionStorage.getItem('fecha_modificada')) { 
+
+            const next_day = mutarFecha("plus", sessionStorage.getItem('fecha_modificada'));
+            $('#headerDateShort').html(getFormatedDate(next_day));
+            sessionStorage.setItem('fecha_modificada', next_day);
+
+        }
+    });
+
+    $('#avanzarIzquierda').on("click", function(e) {
+        if(!sessionStorage.getItem('fecha_modificada')) { 
+
+            const next_day = mutarFecha("minus", sessionStorage.getItem('fecha_actual'));
+            sessionStorage.setItem('fecha_modificada', next_day);
+            $('#headerDateShort').html(getFormatedDate(next_day));
+
+        } else if(sessionStorage.getItem('fecha_modificada')) { 
+
+            const next_day = mutarFecha("minus", sessionStorage.getItem('fecha_modificada'));
+            $('#headerDateShort').html(getFormatedDate(next_day));
+            sessionStorage.setItem('fecha_modificada', next_day);
+
+        }
+    });
+
+    $('#btIrHoy').on("click", function(e) {
+
+        sessionStorage.setItem('fecha_modificada', '');
+        setCurrentDay(sessionStorage.getItem('fecha_actual'));
+
     });
 
 });
@@ -189,4 +232,29 @@ const calcularMes = (numberMonth) => {
         case 11: return "Noviembre"
         case 12: return "Diciembre"
     }
+}
+
+const setCurrentDay = (fecha_actual) => {
+    const v_date = luxon.DateTime.fromISO(fecha_actual).setLocale("es");
+    const nombre_dia = v_date.weekdayShort.charAt(0).toUpperCase() + v_date.weekdayShort.slice(1);
+    const num_dia = v_date.day;
+    const num_mes = v_date.month;
+    const nombre_mes = v_date.monthShort.charAt(0).toUpperCase() + v_date.monthShort.slice(1);
+    $('#headerDateShort').html(`Hoy - ${nombre_dia} ${num_dia}/${nombre_mes}`);
+}
+
+const mutarFecha = (tipo, fecha) => {
+    const v_date = luxon.DateTime.fromISO(fecha);
+    switch(tipo) {
+        case "plus": return luxon.DateTime.fromISO(v_date).plus({ day: 1 }).toISODate()
+        case "minus": return luxon.DateTime.fromISO(v_date).minus({ day: 1 }).toISODate()
+    }
+}
+
+const getFormatedDate = (fecha_actual) => {
+    const v_date = luxon.DateTime.fromISO(fecha_actual).setLocale("es");
+    const nombre_dia = v_date.weekdayShort.charAt(0).toUpperCase() + v_date.weekdayShort.slice(1);
+    const num_dia = v_date.day;
+    const nombre_mes = v_date.monthShort.charAt(0).toUpperCase() + v_date.monthShort.slice(1);
+    return `${nombre_dia} ${num_dia}/${nombre_mes}`;
 }
