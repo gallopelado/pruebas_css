@@ -7,187 +7,296 @@
     <title>INTRA</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- <link rel="stylesheet" href="./css/estilos_intra.css"> -->
 </head>
 <body>
     
 
     <div class="container">
 
+        <h3 class="text-center">Registro Continuo</h3>
+        
         <div class="panel panel-default">
             <div class="panel-heading text-center">
-                <button class="btn btn-primary"type="btInicioAnestesia">INICIO DE LA ANESTESIA</button>
-                <button class="btn btn-primary"type="btInicioCirugia">INICIO DE LA CIRUGÍA</button>
+                <button class="btn btn-primary"type="btInicioAnestesia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA ANESTESIA</button>
+                <button class="btn btn-primary"type="btInicioCirugia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA CIRUGÍA</button>
             </div>
             <div class="panel-body">
 
                 <!-- Agentes -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">Agentes</div>
+                    <div class="panel-heading"><h5 class="text-center">Agentes</h5></div>
                     <div class="panel-body">
-                        <div class="row">
-                            <div class="col col-sm-12 col-md-10 col-md-offset-3">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">Descripción <span class="label label-default">(Unidad)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Actual" disabled>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Anterior" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">OXÍGENO <span class="label label-default">(L/min)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">OXIDO NITROSO <span class="label label-default">(L/min)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">ISOFLURANO <span class="label label-default">(%)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">SEVOFLURANO <span class="label label-default">(%)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">DESFLURANO <span class="label label-default">(%)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                </form>
+                        
+                            
+                        <form class="form-horizontal">
+
+                            <div class="form-group visible-md-block visible-lg-block">
+                            
+                                <h4 class="col-md-4 text-center">Descripción <span class="label label-default">(Unidad)</span></h4>
+                                <h4 class="col-md-4 text-center">Valor anterior y Tiempo transcurrido</h4>
+                                <h4 class="col-md-4 text-center">Valor actual <span class="label label-default">(Unidad)</span></h4>
+                        
                             </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer text-center">
-                        <button class="btn btn-primary btn-block">GUARDAR</button>
+
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">OXÍGENO <span class="label label-default">(L/min)</span></h5>
+                        
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">OXIDO NITROSO <span class="label label-default">(L/min)</span></h5>
+                        
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">ISOFLURANO <span class="label label-default">(%)</span></h5>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">SEVOFLURANO <span class="label label-default">(%)</span></h5>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
+                            </div>
+                        
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">DESFLURANO <span class="label label-default">(%)</span></h5>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
+                            </div>
+                        
+                        </form>
+                            
+                        
                     </div>
                 </div>
                 <!-- Fin agentes -->
 
                 <!-- Registro Intraoperatorio -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">Registro Intraoperatorio</div>
+                    <div class="panel-heading"><h5 class="text-center">Registro Intraoperatorio</h5></div>
                     <div class="panel-body">
-                         <!--DESCRIPCION-->
-                         <div class="row">
-                            <div class="col col-sm-12 col-md-12">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">Descripción <span class="label label-default">(unidad)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                </form>
+                        <form class="form-horizontal">
+                             <!--Titulos-->
+                            <div class="form-group visible-md-block visible-lg-block">
+                        
+                                <h4 class="col-md-4 text-center">Descripción <span class="label label-default">(Unidad)</span></h4>
+                                <h4 class="col-md-4 text-center">Valor anterior y Tiempo transcurrido</h4>
+                                <h4 class="col-md-4 text-center">Valor actual <span class="label label-default">(Unidad)</span></h4>
+                        
                             </div>
-                        </div>
-                        <!--tiempo actual-->
-                        <div class="row">
-                            <div class="col col-sm-12 col-md-12">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Tiempo actual</label>
-                                        <div class="col-sm-2">
-                                            <input type="datetime-local" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="datetime-local" class="form-control" id="inputEmail3" disabled>
-                                        </div>
-                                    </div>
-                                </form>
+
+                            <!--tiempo actual-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">Tiempo actual</h5>
+                        
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="datetime-local" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
                             </div>
-                        </div>
-                         <!--PAS/PAD-->
-                         <div class="row">
-                            <div class="col col-sm-12 col-md-12">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Presión arterial (PAS/PAD)</label>
-                                        <div class="col-sm-1">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-1">
-                                            <span>/</span>
-                                        </div>
-                                        <div class="col-sm-1">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-1">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                        <div class="col-sm-1">
-                                            <span>/</span>
-                                        </div>
-                                        <div class="col-sm-1">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                </form>
+
+                            <!--PAS/PAD-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">Presión arterial (PAS/PAD)</h5>
+                        
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="text" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
                             </div>
-                        </div>
-                        <!--ISOFLURANO-->
-                        <div class="row">
-                            <div class="col col-sm-12 col-md-12">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">ISOFLURANO <span class="label label-default">(%)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                </form>
+
+                            <!--Pulso-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">Pulso <span class="label label-default">(lpm)</span></h5>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
                             </div>
-                        </div>
-                         <!--DESFLURANO-->
-                         <div class="row">
-                            <div class="col col-sm-12 col-md-12">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label ">DESFLURANO <span class="label label-default">(%)</span></label>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <input type="number" class="form-control" id="inputEmail3" placeholder="1" disabled>
-                                        </div>
-                                    </div>
-                                </form>
+
+                            <!--Saturacion O2-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">Saturación O<sup>2</sup> <span class="label label-default">(%)</span></h5>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
                             </div>
-                        </div>
+
+                            <!--EtCO2-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">EtCO<sup>2</sup> <span class="label label-default">(mm/Hg)</span></h5>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
+                            </div>
+
+                            <!--Diuresis(mL)-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center">Diuresis <span class="label label-default">(mL)</span></h5>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                </div>
+                        
+                            </div>
+
+                            <!--Ventilación espontánea-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center text-center">Ventilación espontánea</h5>
+
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="radio col-md-4 text-center">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                    </label>
+                                </div>
+                                
+                                <div class="col-md-4 col-md-offset-8">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Frecuencia respiratoria">
+                                </div>
+                                
+                            </div>
+
+                            <!--Ventilación asistida-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center text-center">Ventilación asistida</h5>
+
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                <div class="radio col-md-4 text-center">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                    </label>
+                                </div>
+                                
+                                <div class="col-md-4 col-md-offset-8">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Volumen Corriente(Tidal)">
+                                </div>
+                                <div class="col-md-4 col-md-offset-8">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Modo">
+                                </div>
+                                <div class="col-md-4 col-md-offset-8">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Frecuencia Respiratoria">
+                                </div>
+                                
+                            </div>
+
+                            <!--Soluciones-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center text-center">Soluciones</h5>
+
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Tipo">
+                                </div>
+                                <div class="col-md-4 col-md-offset-8">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Volumen">
+                                </div>
+                                
+                            </div>
+
+                            <!--Sangre y derivados-->
+                            <div class="form-group">
+                        
+                                <h5 class="col-md-4 text-center text-center">Sangre y derivados</h5>
+
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Tipo">
+                                </div>
+                                <div class="col-md-4 col-md-offset-8">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Volumen">
+                                </div>
+                                
+                            </div>
+
+                         </form>
 
                     </div>
                 </div>
@@ -195,30 +304,34 @@
 
                 <!-- Medicamentos -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">Medicamentos Administrada</div>
+                    <div class="panel-heading"><h5 class="text-center">Medicamentos Administrada</h5></div>
                     <div class="panel-body">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label ">Descripción <span class="label label-default">(Unidad)</span></label>
-                                <div class="col-sm-2">
-                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Actual" disabled>
+                        
+                                <div class="col-md-8">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Medicamento">
                                 </div>
-                                <div class="col-sm-2">
-                                    <input type="number" class="form-control" id="inputEmail3" placeholder="Valor Anterior" disabled>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Dosis">
                                 </div>
+                        
                             </div>
                         </form>
-                    </div>
-                    <div class="panel-footer text-center">
-                        <button class="btn btn-primary btn-block">GUARDAR</button>
                     </div>
                 </div>
                 <!-- Fin Medicamentos -->
 
             </div>
             <div class="panel-footer text-center">
-                <button class="btn btn-primary" type="button" id="btFinAnestesia">FIN DE LA ANESTESIA</button>
-                <button class="btn btn-primary" type="button" id="btFinCirugia">FIN DE LA CIRUGÍA</button>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" id="btFinAnestesia"><span class="glyphicon glyphicon-time"></span> FIN DE LA ANESTESIA</button>
+                    <button class="btn btn-primary" type="button" id="btFinCirugia"><span class="glyphicon glyphicon-time"></span> FIN DE LA CIRUGÍA</button>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
+                </div>
+                
             </div>
         </div>
 
