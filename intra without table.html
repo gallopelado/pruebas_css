@@ -14,8 +14,8 @@
 
     <div class="container">
 
+        <!--Registro continuo form-->
         <h3 class="text-center">Registro Continuo</h3>
-        
         <div class="panel panel-default">
             <div class="panel-heading text-center">
                 <button class="btn btn-primary"type="btInicioAnestesia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA ANESTESIA</button>
@@ -342,13 +342,417 @@
                     <button class="btn btn-primary" type="button" id="btFinCirugia"><span class="glyphicon glyphicon-time"></span> FIN DE LA CIRUGÍA</button>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
+                    <button class="btn btn-primary  hidden-sm hidden-xs"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
+                    <button class="btn btn-primary visible-sm-block btn-block"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
                 </div>
                 
             </div>
         </div>
+        <!--End Registro continuo form-->
 
-        
+        <!--Tecnica anestesia form-->
+        <div class="panel panel-default">
+            <div class="panel-heading text-center"><h3>Técnica antiestética pancholo</h3></div>
+            <div class="panel-body">
+
+                <!---->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="optionsRadios" class="control-label col-md-6">General</label>
+                                <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>SI
+                                    </label>
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">NO
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                   </div>
+
+                   <div class="panel-body">
+                    <form class="form-horizontal">
+
+                        <div class="form-group">
+                            <div class="col-sm-12 col-md-4 col-md-offset-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Inducción</span>
+                                    <div class="radio form-control text-center">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> IV
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Inhalatoria
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Mascarilla</span>
+                                    <div class="radio form-control text-center">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12 col-md-4 col-md-offset-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Cánula</span>
+                                    <div class="radio form-control text-center">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Globo inflable</span>
+                                    <div class="radio form-control text-center">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h5 class="col-md-4 text-center">IOT - Tubo Nro.</h5>
+                            <div class="col-md-4">
+                                <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h5 class="col-md-4 text-center">INT - Tubo Nro.</h5>
+                            <div class="col-md-4">
+                                <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h5 class="col-md-4 text-center">Máscara laríngea - Nro.</h5>
+                            <div class="col-md-4">
+                                <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                            </div>
+                        </div>
+
+                    </form>
+                   </div>
+
+                </div>
+                <!---->
+
+                <!--Regional-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="optionsRadios" class="control-label col-md-6">Regional</label>
+                                <div class="radio">
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>SI
+                                    </label>
+                                    <label>
+                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">NO
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                   </div>
+                   <div class="panel-body">
+                       <form class="form-horizontal">
+
+                            <div class="form-group">
+
+                                <div class="col-sm-12 col-md-4 col-md-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Raquídea</span>
+                                        <div class="radio form-control text-right">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12 col-md-6 col-md-offset-1">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    
+                                                    <div class="form-inline text-center">
+
+                                                        <div class="form-group">
+                                                            <label for="" class="control-label">Aguja Nro.:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="form-inline text-center">
+
+                                                        <div class="form-group">
+                                                            <label for="" class="control-label">Espacio:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="form-inline text-center">
+
+                                                        <div class="form-group">
+                                                            <label for="" class="control-label">Droga/Dosis:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-sm-12 col-md-4 col-md-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Peridural</span>
+                                        <div class="radio form-control text-right">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12 col-md-6 col-md-offset-1">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <div class="form-inline text-center">
+
+                                                        <div class="form-group">
+                                                            <label for="" class="control-label">Espacio:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="form-inline text-center">
+                                                        <div class="form-group">
+                                                            <label for="" class="control-label">Droga/Dosis:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12 col-md-4 col-md-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Bloque Nervioso Ecoguiado</span>
+                                        <div class="radio form-control text-right">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12 col-md-6 col-md-offset-1">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <li class="list-group-item">
+                                                <div class="form-inline text-center">
+
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Tipo:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-inline text-center">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Droga/Dosis:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-sm-12 col-md-4 col-md-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Bloque Parietal</span>
+                                        <div class="radio form-control text-right">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12 col-md-6 col-md-offset-1">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <li class="list-group-item">
+                                                <div class="form-inline text-center">
+
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Espacio:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-inline text-center">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Droga/Dosis:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-sm-12 col-md-4 col-md-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Bloque Peribulbar</span>
+                                        <div class="radio form-control text-right">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12 col-md-6 col-md-offset-1">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <li class="list-group-item">
+                                                <div class="form-inline text-center">
+
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Concentración:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-inline text-center">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label">Drogas(%)/Volumen:</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                       </form>
+                   </div>
+                </div>
+                <!---->
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-group">
+                        
+                            <h5 class="col-md-4 text-center">Otros</h5>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                   <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+
+                            <div class="col-sm-12 col-md-3 col-md-offset-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Otros</span>
+                                    <div class="radio form-control text-right">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">No
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Si
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        </div>
+                    </div>
+                   </div>
+                </div>
+
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <!--End Tecnica anestesia form-->
 
     </div>
 
