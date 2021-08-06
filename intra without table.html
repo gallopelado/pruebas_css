@@ -18,8 +18,8 @@
         <h3 class="text-center">Registro Continuo</h3>
         <div class="panel panel-default">
             <div class="panel-heading text-center">
-                <button class="btn btn-primary"type="btInicioAnestesia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA ANESTESIA</button>
-                <button class="btn btn-primary"type="btInicioCirugia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA CIRUGÍA</button>
+                <button class="btn btn-primary" type="btInicioAnestesia" id="btInicioAnestesia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA ANESTESIA</button>
+                <button class="btn btn-primary" type="btInicioCirugia" id="btInicioCirugia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA CIRUGÍA</button>
             </div>
             <div class="panel-body">
 
@@ -44,10 +44,10 @@
                                 <h5 class="col-md-4 text-center">OXÍGENO <span class="label label-default">(L/min)</span></h5>
                         
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inOxigeno11_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="agentes" id="inOxigeno11" codigo_grupo_examination="1" codigo_item_examination="11" min="0" max="500" step="10" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -57,10 +57,10 @@
                                 <h5 class="col-md-4 text-center">OXIDO NITROSO <span class="label label-default">(L/min)</span></h5>
                         
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inOxigeno12_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="agentes" id="inOxigeno12" codigo_grupo_examination="1" codigo_item_examination="12" min="0" max="500" step="10" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -69,10 +69,10 @@
                         
                                 <h5 class="col-md-4 text-center">ISOFLURANO <span class="label label-default">(%)</span></h5>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inIsoflurano13_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="agentes" id="inIsoflurano13" codigo_grupo_examination="1" codigo_item_examination="13" min="0" max="100" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -81,10 +81,10 @@
                         
                                 <h5 class="col-md-4 text-center">SEVOFLURANO <span class="label label-default">(%)</span></h5>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inSevoflurano14_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="agentes" id="inSevoflurano14" codigo_grupo_examination="1" codigo_item_examination="14" min="0" max="100" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -93,10 +93,10 @@
                         
                                 <h5 class="col-md-4 text-center">DESFLURANO <span class="label label-default">(%)</span></h5>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inDesflurano15_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="agentes" id="inDesflurano15" codigo_grupo_examination="1" codigo_item_examination="15" min="0" max="100" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -128,10 +128,10 @@
                                 <h5 class="col-md-4 text-center">Tiempo actual</h5>
                         
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="text" class="form-control text-center" id="inputEmail3" placeholder="Tiempo actual" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="datetime-local" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="datetime-local" class="form-control text-center" id="tiempo_actual" step="1">
                                 </div>
                         
                             </div>
@@ -142,16 +142,16 @@
                                 <h5 class="col-md-4 text-center">Presión arterial (PAS/PAD)</h5>
                         
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="text" class="form-control text-center" id="inPas_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inPulso_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="text" class="form-control text-center" name="registro_intraoperatorio" id="inPas" codigo_grupo_examination="2" codigo_item_examination="21" min="0" max="500" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="registro_intraoperatorio" id="inPulso" codigo_grupo_examination="2" codigo_item_examination="23" min="0" max="300" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -161,10 +161,10 @@
                         
                                 <h5 class="col-md-4 text-center">Pulso <span class="label label-default">(lpm)</span></h5>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inPulso_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="registro_intraoperatorio" id="inPulso" codigo_grupo_examination="2" codigo_item_examination="23" min="0" max="300" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -174,10 +174,10 @@
                         
                                 <h5 class="col-md-4 text-center">Saturación O<sup>2</sup> <span class="label label-default">(%)</span></h5>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inSaturacion_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="registro_intraoperatorio" id="inSaturacion" codigo_grupo_examination="2" codigo_item_examination="24" min="0" max="100" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -187,10 +187,10 @@
                         
                                 <h5 class="col-md-4 text-center">EtCO<sup>2</sup> <span class="label label-default">(mm/Hg)</span></h5>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inEtCO2_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="registro_intraoperatorio" id="inEtCO2" codigo_grupo_examination="2" codigo_item_examination="25" min="0" max="200" step="1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
@@ -200,98 +200,98 @@
                         
                                 <h5 class="col-md-4 text-center">Diuresis <span class="label label-default">(mL)</span></h5>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="inDiuresis_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                    <input type="number" class="form-control text-center" name="registro_intraoperatorio" id="inDiuresis" codigo_grupo_examination="2" codigo_item_examination="26" min="0" max="5000" step="0.1" autocomplete="off" placeholder="valor">
                                 </div>
                         
                             </div>
 
                             <!--Ventilación espontánea-->
-                            <div class="form-group">
+                            <div class="form-group" id="radio_frecuencia_respiratoria" codigo_grupo_examination="2" codigo_item_examination="27">
                         
                                 <h5 class="col-md-4 text-center text-center">Ventilación espontánea</h5>
 
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="irFrecuenciaRespiratoria_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="radio col-md-4 text-center">
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                        <input type="radio" name="irFrecuenciaRespiratoria" value="NO" checked> No
                                     </label>
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                        <input type="radio" name="irFrecuenciaRespiratoria" value="SI"> Si
                                     </label>
                                 </div>
                                 
                                 <div class="col-md-4 col-md-offset-8">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Frecuencia respiratoria">
+                                    <input type="number" class="form-control text-center" name="registro_intraoperatorio" id="itFrecuenciaRespiratoria" autocomplete="off" placeholder="Frecuencia respiratoria">
                                 </div>
                                 
                             </div>
 
                             <!--Ventilación asistida-->
-                            <div class="form-group">
+                            <div class="form-group" id="radio_ventilacion_asistida" codigo_grupo_examination="2" codigo_item_examination="28">
                         
                                 <h5 class="col-md-4 text-center text-center">Ventilación asistida</h5>
 
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="irModo_disabled" placeholder="valor" disabled>
                                 </div>
                                 <div class="radio col-md-4 text-center">
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                        <input type="radio" name="irModo" value="NO" checked> No
                                     </label>
                                     <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                        <input type="radio" name="irModo" value="SI"> Si
                                     </label>
                                 </div>
                                 
                                 <div class="col-md-4 col-md-offset-8">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Volumen Corriente(Tidal)">
+                                    <input type="number" class="form-control text-center" name="volumen_asistida" id="itVolumenCorriente" autocomplete="off" placeholder="Volumen Corriente(Tidal)">
                                 </div>
                                 <div class="col-md-4 col-md-offset-8">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Modo">
+                                    <input type="number" class="form-control text-center" name="volumen_asistida" id="itModo" autocomplete="off" placeholder="Modo">
                                 </div>
                                 <div class="col-md-4 col-md-offset-8">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Frecuencia Respiratoria">
+                                    <input type="number" class="form-control text-center" name="volumen_asistida" id="itVFrecuenciaRespiratoria" autocomplete="off" placeholder="Frecuencia Respiratoria">
                                 </div>
                                 
                             </div>
 
                             <!--Soluciones-->
-                            <div class="form-group">
+                            <div class="form-group" id="block_soluciones" codigo_grupo_examination="2" codigo_item_examination="29">
                         
                                 <h5 class="col-md-4 text-center text-center">Soluciones</h5>
 
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="number" class="form-control text-center" id="block_soluciones_disabled" placeholder="valor" disabled>
                                 </div>
                                 
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Tipo">
+                                    <input type="number" class="form-control text-center" name="soluciones" id="itSolucionTipo" autocomplete="off" placeholder="Tipo">
                                 </div>
                                 <div class="col-md-4 col-md-offset-8">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Volumen">
+                                    <input type="number" class="form-control text-center" name="soluciones" id="itSolucionVolumen" autocomplete="off" placeholder="Volumen">
                                 </div>
                                 
                             </div>
 
                             <!--Sangre y derivados-->
-                            <div class="form-group">
+                            <div class="form-group" id="block_sangre_derivados" codigo_grupo_examination="2" codigo_item_examination="210">
                         
                                 <h5 class="col-md-4 text-center text-center">Sangre y derivados</h5>
 
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor" disabled>
+                                    <input type="text" class="form-control text-center" id="block_sangre_derivados_disabled" placeholder="valor" disabled>
                                 </div>
                                 
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Tipo">
+                                    <input type="number" class="form-control text-center" name="sangreyderivados" id="itSagreDerivadoTipo" autocomplete="off" placeholder="Tipo">
                                 </div>
                                 <div class="col-md-4 col-md-offset-8">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Volumen">
+                                    <input type="number" class="form-control text-center" name="sangreyderivados" id="itSagreDerivadoVolumen" autocomplete="off" placeholder="Volumen">
                                 </div>
                                 
                             </div>
@@ -310,16 +310,16 @@
                             <div class="form-group">
                         
                                 <div class="col-md-8">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Medicamento">
+                                    <input type="text" class="form-control text-center" id="codigo_medicamento" autocomplete="off" placeholder="Medicamento">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control text-center" id="inputEmail3" placeholder="Dosis">
+                                    <input type="text" class="form-control text-center" name="itDosis" autocomplete="off" placeholder="Dosis">
                                 </div>
                         
                             </div>
 
-                            <table class="table table-striped table-hover">
-                                <tbody>
+                            <table class="table table-striped table-hover" id="tablaMedicamentos">
+                                <tbody id="tbody_medicamentos">
                                     <tr>
                                         <td>Medicamento 1</td>
                                         <td>20</td>
@@ -342,8 +342,8 @@
                     <button class="btn btn-primary" type="button" id="btFinCirugia"><span class="glyphicon glyphicon-time"></span> FIN DE LA CIRUGÍA</button>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary  hidden-sm hidden-xs"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
-                    <button class="btn btn-primary visible-sm-block btn-block"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
+                    <button class="btn btn-primary  hidden-sm hidden-xs" name="btGuardarRegistroContinuo"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
+                    <button class="btn btn-primary visible-sm-block btn-block" name="btGuardarRegistroContinuo"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
                 </div>
                 
             </div>
@@ -363,10 +363,10 @@
                                 <label for="optionsRadios" class="control-label col-md-6">General</label>
                                 <div class="radio">
                                     <label>
-                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>SI
+                                      <input type="radio" name="irGeneral" value="NO" checked>No
                                     </label>
                                     <label>
-                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">NO
+                                      <input type="radio" name="irGeneral" value="SI">Si
                                     </label>
                                 </div>
                             </div>
@@ -374,7 +374,7 @@
                    </div>
 
                    <div class="panel-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="generalComponent">
 
                         <div class="form-group">
                             <div class="col-sm-12 col-md-4 col-md-offset-1">
@@ -382,10 +382,10 @@
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Inducción</span>
                                     <div class="radio form-control text-center">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> IV
+                                            <input type="radio" name="irInduccion" value="IV" checked> IV
                                         </label>
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Inhalatoria
+                                            <input type="radio" name="irInduccion" value="Inhalatoria"> Inhalatoria
                                         </label>
                                     </div>
                                 </div>
@@ -395,10 +395,10 @@
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Mascarilla</span>
                                     <div class="radio form-control text-center">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                            <input type="radio" name="irMascarilla" value="NO" checked> No
                                         </label>
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                            <input type="radio" name="irMascarilla" value="SI"> Si
                                         </label>
                                     </div>
                                 </div>
@@ -411,10 +411,10 @@
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Cánula</span>
                                     <div class="radio form-control text-center">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                            <input type="radio" name="irCanula" value="NO" checked> No
                                         </label>
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                            <input type="radio" name="irCanula" value="SI"> Si
                                         </label>
                                     </div>
                                 </div>
@@ -424,10 +424,10 @@
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Globo inflable</span>
                                     <div class="radio form-control text-center">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> No
+                                            <input type="radio" name="irGloboInflable" value="NO" checked> No
                                         </label>
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Si
+                                            <input type="radio" name="irGloboInflable" value="SI"> Si
                                         </label>
                                     </div>
                                 </div>
@@ -437,19 +437,19 @@
                         <div class="form-group">
                             <h5 class="col-md-4 text-center">IOT - Tubo Nro.</h5>
                             <div class="col-md-4">
-                                <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                <input type="number" class="form-control text-center" name="itiottubonro" id="itiottubonro" placeholder="valor">
                             </div>
                         </div>
                         <div class="form-group">
                             <h5 class="col-md-4 text-center">INT - Tubo Nro.</h5>
                             <div class="col-md-4">
-                                <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                <input type="number" class="form-control text-center" name="itinttubonro" id="itinttubonro" placeholder="valor">
                             </div>
                         </div>
                         <div class="form-group">
                             <h5 class="col-md-4 text-center">Máscara laríngea - Nro.</h5>
                             <div class="col-md-4">
-                                <input type="number" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                <input type="number" class="form-control text-center" name="itmascaralaringea" id="itmascaralaringea" placeholder="valor">
                             </div>
                         </div>
 
@@ -467,17 +467,17 @@
                                 <label for="optionsRadios" class="control-label col-md-6">Regional</label>
                                 <div class="radio">
                                     <label>
-                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>SI
+                                      <input type="radio" name="irRegional" value="NO" checked>No
                                     </label>
                                     <label>
-                                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">NO
+                                      <input type="radio" name="irRegional" value="SI">Si
                                     </label>
                                 </div>
                             </div>
                         </form>
                    </div>
                    <div class="panel-body">
-                       <form class="form-horizontal">
+                       <form class="form-horizontal" id="regionalComponent">
 
                             <div class="form-group">
 
@@ -486,7 +486,7 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Raquídea</span>
                                         <div class="radio form-control text-right">
                                             <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                <input type="radio" name="irRegionalOption" value="1">
                                             </label>
                                         </div>
                                     </div>
@@ -506,7 +506,7 @@
 
                                                         <div class="form-group">
                                                             <label for="" class="control-label">Aguja Nro.:</label>
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" class="form-control" name="itRaquideaAgujaNro" id="itRaquideaAgujaNro" autocomplete="off">
                                                         </div>
                                                     </div>
 
@@ -516,7 +516,7 @@
 
                                                         <div class="form-group">
                                                             <label for="" class="control-label">Espacio:</label>
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" class="form-control" name="itRaquideaEspacio" id="itRaquideaEspacio" autocomplete="off">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -525,7 +525,7 @@
 
                                                         <div class="form-group">
                                                             <label for="" class="control-label">Droga/Dosis:</label>
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" class="form-control" name="itRaquideaDroga" id="itRaquideaDroga" autocomplete="off">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -542,7 +542,7 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Peridural</span>
                                         <div class="radio form-control text-right">
                                             <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                <input type="radio" name="irRegionalOption" value="2">
                                             </label>
                                         </div>
                                     </div>
@@ -559,7 +559,7 @@
 
                                                         <div class="form-group">
                                                             <label for="" class="control-label">Espacio:</label>
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" class="form-control" name="itPeriduralEspacio" id="itPeriduralEspacio" autocomplete="off">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -567,7 +567,7 @@
                                                     <div class="form-inline text-center">
                                                         <div class="form-group">
                                                             <label for="" class="control-label">Droga/Dosis:</label>
-                                                            <input type="text" class="form-control">
+                                                            <input type="text" class="form-control" name="itPeriduralDroga" id="itPeriduralDroga" autocomplete="off">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -583,7 +583,7 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Bloque Nervioso Ecoguiado</span>
                                         <div class="radio form-control text-right">
                                             <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                <input type="radio" name="irRegionalOption" value="3">
                                             </label>
                                         </div>
                                     </div>
@@ -600,7 +600,7 @@
 
                                                     <div class="form-group">
                                                         <label for="" class="control-label">Tipo:</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" name="itNeviosoEcoTipo" id="itNeviosoEcoTipo" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </li>
@@ -608,7 +608,7 @@
                                                 <div class="form-inline text-center">
                                                     <div class="form-group">
                                                         <label for="" class="control-label">Droga/Dosis:</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" name="itNeviosoEcoDroga" id="itNeviosoEcoDroga" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </li>
@@ -624,7 +624,7 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Bloque Parietal</span>
                                         <div class="radio form-control text-right">
                                             <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                <input type="radio" name="irRegionalOption" value="4">
                                             </label>
                                         </div>
                                     </div>
@@ -641,8 +641,8 @@
                                                 <div class="form-inline text-center">
 
                                                     <div class="form-group">
-                                                        <label for="" class="control-label">Espacio:</label>
-                                                        <input type="text" class="form-control">
+                                                        <label for="" class="control-label">Tipo:</label>
+                                                        <input type="text" class="form-control" name="itParietalTipo" id="itParietalTipo" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </li>
@@ -650,7 +650,7 @@
                                                 <div class="form-inline text-center">
                                                     <div class="form-group">
                                                         <label for="" class="control-label">Droga/Dosis:</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" name="itParietalDroga" id="itParietalDroga" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </li>
@@ -666,7 +666,7 @@
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Bloque Peribulbar</span>
                                         <div class="radio form-control text-right">
                                             <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                <input type="radio" name="irRegionalOption" value="5">
                                             </label>
                                         </div>
                                     </div>
@@ -684,7 +684,7 @@
 
                                                     <div class="form-group">
                                                         <label for="" class="control-label">Concentración:</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" name="itPeribulbarConcentracion" id="itPeribulbarConcentracion" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </li>
@@ -692,7 +692,7 @@
                                                 <div class="form-inline text-center">
                                                     <div class="form-group">
                                                         <label for="" class="control-label">Drogas(%)/Volumen:</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control" name="itPeribulbarDroga" id="itPeribulbarDroga" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </li>
@@ -712,7 +712,7 @@
                         
                             <h5 class="col-md-4 text-center">Otros</h5>
                             <div class="col-md-4">
-                                <input type="text" class="form-control text-center" id="inputEmail3" placeholder="valor">
+                                <input type="text" class="form-control text-center" name="itOtros" id="itOtros" placeholder="valor" autocomplete="off">
                             </div>
                     
                         </div>
@@ -726,31 +726,31 @@
 
                             <div class="col-sm-12 col-md-3 col-md-offset-1">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Otros</span>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i> Sedación</span>
                                     <div class="radio form-control text-right">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">No
+                                            <input type="radio" name="irSedacion" value="NO">No
                                         </label>
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Si
+                                            <input type="radio" name="irSedacion" value="SI">Si
                                         </label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-6">
-                                <input type="text" class="form-control">
+                                <input type="text" name="itSedacion" id="itSedacion" class="form-control text-center" placeholder="especificar" autocomplete="off" disabled>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                        </div>
                     </div>
                    </div>
                 </div>
 
             </div>
-            <div class="panel-footer"></div>
+            <div class="panel-footer">
+                <button type="button" class="btn btn-primary" id="btIntraAnestesia"><i class="fas fa-save"></i> Guardar</button>
+            </div>
         </div>
         <!--End Tecnica anestesia form-->
 
