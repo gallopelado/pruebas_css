@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INTRA</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <!-- <link rel="stylesheet" href="./css/estilos_intra.css"> -->
+    <link rel="stylesheet" href="./bower_components/bootswatch/bootstrap3.min.css">
+    <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome-5.14.0.css">
 </head>
 <body>
     
@@ -18,14 +20,14 @@
         <h3 class="text-center">Registro Continuo</h3>
         <div class="panel panel-default">
             <div class="panel-heading text-center">
-                <button class="btn btn-primary" type="btInicioAnestesia" id="btInicioAnestesia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA ANESTESIA</button>
-                <button class="btn btn-primary" type="btInicioCirugia" id="btInicioCirugia"><span class="glyphicon glyphicon-time"></span> INICIO DE LA CIRUGÍA</button>
+                <button class="btn btn-primary" type="btInicioAnestesia" id="btInicioAnestesia"><i class="fas fa-clock"></i> INICIO DE LA ANESTESIA</button>
+                <button class="btn btn-primary" type="btInicioCirugia" id="btInicioCirugia"><i class="fas fa-clock"></i> INICIO DE LA CIRUGÍA</button>
             </div>
             <div class="panel-body">
 
                 <!-- Agentes -->
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h5 class="text-center">Agentes</h5></div>
+                    <div class="panel-heading"><h3 class="text-center">Agentes</h3></div>
                     <div class="panel-body">
                         
                             
@@ -38,6 +40,8 @@
                                 <h4 class="col-md-4 text-center">Valor actual <span class="label label-default">(Unidad)</span></h4>
                         
                             </div>
+
+                            <hr>
 
                             <div class="form-group">
                         
@@ -121,6 +125,8 @@
                                 <h4 class="col-md-4 text-center">Valor actual <span class="label label-default">(Unidad)</span></h4>
                         
                             </div>
+
+                            <hr>
 
                             <!--tiempo actual-->
                             <div class="form-group">
@@ -338,12 +344,12 @@
             </div>
             <div class="panel-footer text-center">
                 <div class="form-group">
-                    <button class="btn btn-primary" type="button" id="btFinAnestesia"><span class="glyphicon glyphicon-time"></span> FIN DE LA ANESTESIA</button>
-                    <button class="btn btn-primary" type="button" id="btFinCirugia"><span class="glyphicon glyphicon-time"></span> FIN DE LA CIRUGÍA</button>
+                    <button class="btn btn-primary" type="button" id="btFinAnestesia"><i class="fas fa-clock"></i> FIN DE LA ANESTESIA</button>
+                    <button class="btn btn-primary" type="button" id="btFinCirugia"><i class="fas fa-clock"></i> FIN DE LA CIRUGÍA</button>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary  hidden-sm hidden-xs" name="btGuardarRegistroContinuo"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
-                    <button class="btn btn-primary visible-sm-block btn-block" name="btGuardarRegistroContinuo"><span class="glyphicon glyphicon-floppy-disk"></span> GUARDAR REGISTRO CONTINUO</button>
+                    <button class="btn btn-primary  hidden-sm hidden-xs" name="btGuardarRegistroContinuo"><i class="fas fa-save"></i> GUARDAR REGISTRO CONTINUO</button>
+                    <button class="btn btn-primary visible-sm-block btn-block" name="btGuardarRegistroContinuo"><i class="fas fa-save"></i> GUARDAR REGISTRO CONTINUO</button>
                 </div>
                 
             </div>
