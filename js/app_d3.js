@@ -72,4 +72,46 @@ d3.csv("../tiempos.csv",
         .y(function(d) { return y(d.value) })
         )
 
+        // otra linea
+        d3.csv("../tiempos2.csv",
+
+        // When reading the csv, I must format variables:
+        function(d){
+            console.log(d)
+          //return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+          return { timestamp : d3.timeParse("%Y-%m-%dT%H:%M:%S")(d.timestamp), value : d.temperatura }
+        },
+
+        // Now I can use this dataset:
+        function(data) {
+
+          // Set the gradient
+          svg.append("linearGradient")
+            .attr("id", "line-gradient")
+            .attr("gradientUnits", "userSpaceOnUse")
+            .attr("x1", 0)
+            .attr("y1", y(0))
+            .attr("x2", 0)
+            .attr("y2", y(max))
+            .selectAll("stop")
+              .data([
+                {offset: "0%", color: "blue"},
+                {offset: "100%", color: "red"}
+              ])
+            .enter().append("stop")
+              .attr("offset", function(d) { return d.offset; })
+              .attr("stop-color", function(d) { return d.color; });
+
+          // Add the line
+          svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "green" )
+            .attr("stroke-width", 2)
+            .attr("d", d3.line()
+              .x(function(d) { return x(d.timestamp) })
+              .y(function(d) { return y(d.value) })
+              )
+
+      })
 })
