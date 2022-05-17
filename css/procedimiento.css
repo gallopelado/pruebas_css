@@ -1,0 +1,48 @@
+.box_labels {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    align-content: center;
+}
+
+.box_inputs textarea {
+    resize: none;
+}
+
+.box_inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.box_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.box_list ul {
+    margin-top: 2%;
+}
+
+.textarea_input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.btn-guardar-proc {
+    margin-left: 2rem;
+}
+
+.margin-group-buttons {
+    margin-left: 1rem;
+}
