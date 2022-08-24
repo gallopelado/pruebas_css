@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body>
+    <h1>Prueba select2</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <select id="lang" >
+                    <option value="php">php</option>
+                    <option value="asp">asp</option>
+                    <option value="java">java</option>
+                 </select>
+            </div>
+            <div class="col-md-6">
+                <select id="ciudad" >
+                    <option value="1">Asuncion</option>
+                    <option value="2">Fernando de la mora</option>
+                    <option value="3">Villa Elisa</option>
+                 </select>
+            </div>
+        </div>
+        
+
+         
+    </div>
+    
+
+    <script>
+        $(()=> {
+            // $('#selectteam').val([183,182]).trigger('change');
+            $("select").select2()
+            //$("#lang").val("java").trigger('change');
+
+            
+            $('#lang').on('select2:select', function (e) {
+                
+                const language = $("#lang").select2().val()
+
+                if(language==="php") {
+                    $("#ciudad").val("1").trigger('change');
+                }
+    
+                if(language==="asp") {
+                    $("#ciudad").val("2").trigger('change');
+                }
+    
+                if(language==="java") {
+                    $("#ciudad").val("3").trigger('change');
+                }
+
+            });
+
+            $('#ciudad').on('select2:select', function (e) {
+                
+                const idciudad = $("#ciudad").select2().val()
+
+                if(idciudad==="1") {
+                    $("#lang").val("asp").trigger('change');
+                }
+    
+                if(idciudad==="2") {
+                    $("#lang").val("php").trigger('change');
+                }
+    
+                if(idciudad==="3") {
+                    $("#lang").val("java").trigger('change');
+                }
+                
+            });
+
+
+
+        })
+    </script>
+</body>
+</html>
