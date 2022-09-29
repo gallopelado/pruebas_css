@@ -1,0 +1,31 @@
+body {
+    /* background-color: #f5ffd9; */
+    background-color: #f8f5f2;
+}
+
+.banner {
+    height: 5rem;
+    /* margin-left: 14px;
+    margin-top: 6px; */
+}
+
+.navbar-his {
+    /* background-color: #53a3a3 */
+    background-color: #078080;
+}
+
+.user-icon {
+    color: #fffffe;
+}
+
+h1 {
+    color: #232323;
+}
+
+.card-style {
+    background-color: #fffffe;
+}
+
+label {
+    color: #232323;
+}
