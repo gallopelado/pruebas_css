@@ -1,21 +1,25 @@
-body {
+.wrapper {
     /* background-color: #f5ffd9; */
-    background-color: #f8f5f2;
+    background-color: #04B173;
 }
 
 .banner {
-    height: 5rem;
+    height: 4rem;
     /* margin-left: 14px;
     margin-top: 6px; */
 }
 
 .navbar-his {
     /* background-color: #53a3a3 */
-    background-color: #078080;
+    background-color: rgb(83, 163, 163);
 }
 
 .user-icon {
     color: #fffffe;
+}
+
+.user-icon:hover {
+    color: #e9e6e6;
 }
 
 h1 {

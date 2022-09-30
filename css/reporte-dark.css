@@ -1,0 +1,41 @@
+.wrapper-dark {
+    /* background-color: #f5ffd9; */
+    background-color: #16161a;
+}
+
+.banner {
+    height: 4rem;
+}
+
+.navbar-his-dark {
+    background-color: #242629;
+}
+
+.user-icon-dark {
+    color: #fffffe;
+}
+
+.user-icon-dark:hover {
+    color: #e9e6e6;
+}
+
+.h1-dark {
+    color: #fffffe;
+}
+
+.card-header-dark {
+    color: #fffffe !important;
+}
+
+.btn-primary-dark {
+    background-color: #7f5af0 !important;
+    border-color: #7f5af0 !important;
+}
+
+.card-style-dark {
+    background-color: #242629;
+}
+
+.label-dark {
+    color: #fffffe !important;
+}

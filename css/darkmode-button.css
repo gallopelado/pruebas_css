@@ -1,0 +1,94 @@
+#sw-dark-label {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    display: block;
+    background-color: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+
+/* inserta un elemento después del contenido label */
+#sw-dark-label::after {
+    content: "";
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(180deg, #ffcc89,#d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+#darkmode-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#darkmode-toggle + #sw-dark-label {
+    /* background: #242424; */
+    background: #ebebeb
+}
+
+#darkmode-toggle:checked + #sw-dark-label::after {
+    left: 490px;
+    transform: translateX(-100%);
+}
+
+#sw-dark-label, #sw-dark-label:after {
+    transition: 0.3s;
+}
+
+#sw-dark-label:active:after {
+    width: 260px;
+}
+
+.fondito {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+
+#darkmode-toggle:checked + #sw-dark-label:after {
+    background: #403d3d;
+}
+
+
+#darkmode-toggle:checked + #sw-dark-label {
+    /* background: #242424; */
+    background: #c1c0c0
+}
+
+/* otros */
+#sw-dark-label svg {
+    position: absolute;
+    width: 120px;
+    top: 40px;
+    z-index: 100;
+}
+
+#sw-dark-label svg.sun {
+    left: 40px;
+    fill: #fff;
+    transition: 0.3s;
+}
+
+#sw-dark-label svg.moon {
+    left: 340px;
+    fill: #7e7e7e;
+    transition: 0.3s;
+}
+
+#darkmode-toggle:checked+label svg.sun {
+    fill: #7e7e7e;
+}
+
+#darkmode-toggle:checked+label svg.moon {
+    fill: #fff;
+}
