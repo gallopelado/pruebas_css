@@ -1,10 +1,10 @@
 #sw-dark-label {
-    width: 500px;
-    height: 200px;
+    width: 125px;
+    height: 50px;
     position: relative;
     display: block;
     background-color: #ebebeb;
-    border-radius: 200px;
+    border-radius: 100px;
     box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
     cursor: pointer;
 }
@@ -12,13 +12,13 @@
 /* inserta un elemento después del contenido label */
 #sw-dark-label::after {
     content: "";
-    width: 180px;
-    height: 180px;
+    width: 45px;
+    height: 45px;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 2.5px;
+    left: 2.5px;
     background: linear-gradient(180deg, #ffcc89,#d8860b);
-    border-radius: 180px;
+    border-radius: 45px;
     box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
 }
 
@@ -34,7 +34,7 @@
 }
 
 #darkmode-toggle:checked + #sw-dark-label::after {
-    left: 490px;
+    left: 122.5px;
     transform: translateX(-100%);
 }
 
@@ -43,7 +43,7 @@
 }
 
 #sw-dark-label:active:after {
-    width: 260px;
+    width: 65px;
 }
 
 .fondito {
@@ -68,19 +68,19 @@
 /* otros */
 #sw-dark-label svg {
     position: absolute;
-    width: 120px;
-    top: 40px;
+    width: 30px;
+    top: 10px;
     z-index: 100;
 }
 
 #sw-dark-label svg.sun {
-    left: 40px;
+    left: 10px;
     fill: #fff;
     transition: 0.3s;
 }
 
 #sw-dark-label svg.moon {
-    left: 340px;
+    left: 85px;
     fill: #7e7e7e;
     transition: 0.3s;
 }
