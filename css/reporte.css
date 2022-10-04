@@ -22,14 +22,15 @@
     color: #e9e6e6;
 }
 
-h1 {
+.h1 {
     color: #232323;
+    font-size: 2.5rem;
 }
 
 .card-style {
     background-color: #fffffe;
 }
 
-label {
+.label, .form-check-label {
     color: #232323;
 }

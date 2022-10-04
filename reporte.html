@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bower_components/bootstrap-3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome-5.14.0.css">
-    <link rel="stylesheet" href="./css/reporte-dark.css">
     <link rel="stylesheet" href="./css/darkmode-button.css">
+    <link rel="stylesheet" href="./css/reporte.css">
+    <link rel="stylesheet" href="./css/reporte-dark.css">
     <title>Reporte Pacientes diarios - PY HIS</title>
 </head>
 
-<body class="wrapper-dark">
+<body id="wrapper" class="wrapper">
     <!-- barra de navegación horizontal con banner (Fijo en TOP) -->
-    <nav class="navbar navbar-expand-md sticky-top navbar-his-dark">
+    <nav id="navbar_menu" class="navbar navbar-expand-md sticky-top navbar-his">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img class=" banner img-fluid rounded" src="./img/banner.jpg" alt="banner">
@@ -23,7 +24,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle user-icon-dark" href="#" role="button" data-bs-toggle="dropdown">
+                    <a id="a_link_user" class="nav-link dropdown-toggle user-icon-dark" href="#" role="button" data-bs-toggle="dropdown">
                         <i class="fa fa-light fa-user fa-3x"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -43,9 +44,11 @@
     </nav>
     <!-- fin barra de navegación horizontal con banner -->
 
-    <header class="container-fluid mt-2">
-        <h1 class="h1-dark">
+    <header class="container-fluid mt-4">
+        <h2 id="h1_rep" class="d-inline-block h1">
             Reporte - Pacientes Diarios: Inicio 
+        </h2>
+        <div id="icon_dark" class="d-inline-block float-end d-flex justify-content-center">
             <input type="checkbox" id="darkmode-toggle" />
             <label for="darkmode-toggle" id="sw-dark-label">
                 <!-- SVG -->
@@ -55,21 +58,21 @@
                     <g>
                         <g>
                             <path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M115.089,132.403
-            			c-2.432-4.036-1.135-9.284,2.91-11.716c21.692-13.082,48.648-13.065,70.357,0.009c4.036,2.44,5.333,7.68,2.901,11.716
-            			c-1.596,2.662-4.429,4.13-7.313,4.13c-1.502,0-3.021-0.401-4.403-1.229c-16.256-9.805-36.463-9.813-52.744-0.008
-            			C122.769,137.737,117.513,136.439,115.089,132.403z M121.617,215.97c-3.123-3.524-2.79-8.917,0.742-12.041
-            			c3.533-3.123,8.934-2.79,12.041,0.742c4.864,5.504,11.87,8.661,19.2,8.661c7.339,0,14.344-3.157,19.2-8.67
-            			c3.115-3.533,8.525-3.857,12.041-0.751c3.533,3.115,3.874,8.508,0.76,12.049c-8.098,9.173-19.763,14.438-32,14.438
-            			C141.372,230.4,129.715,225.143,121.617,215.97z M344.704,355.925c-23.774,23.603-55.27,36.608-88.704,36.608
-            			c-33.425,0-64.922-12.996-88.695-36.599c-3.336-3.319-3.354-8.73-0.043-12.066c3.345-3.345,8.738-3.362,12.083-0.043
-            			c20.54,20.412,47.761,31.642,76.655,31.642s56.124-11.238,76.672-31.65c3.345-3.328,8.738-3.311,12.075,0.043
-            			C348.066,347.196,348.049,352.606,344.704,355.925z M390.4,215.962c-8.098,9.173-19.763,14.438-32,14.438
-            			s-23.902-5.265-32.009-14.438c-3.115-3.541-2.782-8.934,0.751-12.049c3.541-3.115,8.926-2.782,12.049,0.742
-            			c4.864,5.521,11.87,8.678,19.209,8.678c7.339,0,14.344-3.157,19.2-8.67c3.115-3.533,8.533-3.857,12.041-0.751
-            			C393.173,207.027,393.515,212.42,390.4,215.962z M396.058,132.412c-1.596,2.662-4.429,4.13-7.313,4.13
-            			c-1.502,0-3.021-0.401-4.403-1.229c-16.256-9.805-36.463-9.813-52.745-0.008c-4.028,2.432-9.284,1.135-11.708-2.901
-            			c-2.432-4.036-1.135-9.284,2.91-11.716c21.692-13.082,48.649-13.065,70.357,0.009C397.193,123.136,398.49,128.375,396.058,132.412
-            			z" />
+                        c-2.432-4.036-1.135-9.284,2.91-11.716c21.692-13.082,48.648-13.065,70.357,0.009c4.036,2.44,5.333,7.68,2.901,11.716
+                        c-1.596,2.662-4.429,4.13-7.313,4.13c-1.502,0-3.021-0.401-4.403-1.229c-16.256-9.805-36.463-9.813-52.744-0.008
+                        C122.769,137.737,117.513,136.439,115.089,132.403z M121.617,215.97c-3.123-3.524-2.79-8.917,0.742-12.041
+                        c3.533-3.123,8.934-2.79,12.041,0.742c4.864,5.504,11.87,8.661,19.2,8.661c7.339,0,14.344-3.157,19.2-8.67
+                        c3.115-3.533,8.525-3.857,12.041-0.751c3.533,3.115,3.874,8.508,0.76,12.049c-8.098,9.173-19.763,14.438-32,14.438
+                        C141.372,230.4,129.715,225.143,121.617,215.97z M344.704,355.925c-23.774,23.603-55.27,36.608-88.704,36.608
+                        c-33.425,0-64.922-12.996-88.695-36.599c-3.336-3.319-3.354-8.73-0.043-12.066c3.345-3.345,8.738-3.362,12.083-0.043
+                        c20.54,20.412,47.761,31.642,76.655,31.642s56.124-11.238,76.672-31.65c3.345-3.328,8.738-3.311,12.075,0.043
+                        C348.066,347.196,348.049,352.606,344.704,355.925z M390.4,215.962c-8.098,9.173-19.763,14.438-32,14.438
+                        s-23.902-5.265-32.009-14.438c-3.115-3.541-2.782-8.934,0.751-12.049c3.541-3.115,8.926-2.782,12.049,0.742
+                        c4.864,5.521,11.87,8.678,19.209,8.678c7.339,0,14.344-3.157,19.2-8.67c3.115-3.533,8.533-3.857,12.041-0.751
+                        C393.173,207.027,393.515,212.42,390.4,215.962z M396.058,132.412c-1.596,2.662-4.429,4.13-7.313,4.13
+                        c-1.502,0-3.021-0.401-4.403-1.229c-16.256-9.805-36.463-9.813-52.745-0.008c-4.028,2.432-9.284,1.135-11.708-2.901
+                        c-2.432-4.036-1.135-9.284,2.91-11.716c21.692-13.082,48.649-13.065,70.357,0.009C397.193,123.136,398.49,128.375,396.058,132.412
+                        z" />
                         </g>
                     </g>
                     <g>
@@ -109,31 +112,31 @@
                     style="enable-background:new 0 0 512 512;" xml:space="preserve">
                     <g transform="translate(1 1)">
                         <path style="fill:#FFE100;" d="M502.467,255c0,136.533-110.933,247.467-247.467,247.467S7.533,391.533,7.533,255
-            		S118.467,7.533,255,7.533S502.467,118.467,502.467,255" />
+                    S118.467,7.533,255,7.533S502.467,118.467,502.467,255" />
                         <path style="fill:#FFA800;"
                             d="M255,7.533c-4.267,0-8.533,0-12.8,0C372.76,14.36,476.867,122.733,476.867,255
-            		S372.76,495.64,242.2,502.467c4.267,0,8.533,0,12.8,0c136.533,0,247.467-110.933,247.467-247.467S391.533,7.533,255,7.533" />
+                    S372.76,495.64,242.2,502.467c4.267,0,8.533,0,12.8,0c136.533,0,247.467-110.933,247.467-247.467S391.533,7.533,255,7.533" />
                         <path style="fill:#FFFFFF;"
                             d="M255,7.533c4.267,0,8.533,0,12.8,0C137.24,14.36,33.133,122.733,33.133,255
-            		S137.24,495.64,267.8,502.467c-4.267,0-8.533,0-12.8,0C118.467,502.467,7.533,391.533,7.533,255S118.467,7.533,255,7.533" />
+                    S137.24,495.64,267.8,502.467c-4.267,0-8.533,0-12.8,0C118.467,502.467,7.533,391.533,7.533,255S118.467,7.533,255,7.533" />
                         <path d="M357.4,229.4c-11.947,0-23.893-5.12-32.427-14.507c-3.413-3.413-2.56-8.533,0.853-11.947s8.533-2.56,11.947,0.853
-            		c5.12,5.12,11.947,8.533,19.627,8.533s14.507-3.413,19.627-8.533c3.413-3.413,8.533-4.267,11.947-0.853
-            		c3.413,3.413,4.267,8.533,0.853,11.947C381.293,224.28,369.347,229.4,357.4,229.4z" />
+                    c5.12,5.12,11.947,8.533,19.627,8.533s14.507-3.413,19.627-8.533c3.413-3.413,8.533-4.267,11.947-0.853
+                    c3.413,3.413,4.267,8.533,0.853,11.947C381.293,224.28,369.347,229.4,357.4,229.4z" />
                         <path d="M152.6,229.4c-11.947,0-23.893-5.12-31.573-14.507c-3.413-3.413-2.56-8.533,0.853-11.947
-            		c3.413-3.413,8.533-2.56,11.947,0.853c5.12,5.12,11.947,8.533,18.773,8.533c7.68,0,14.507-3.413,19.627-8.533
-            		c3.413-3.413,8.533-4.267,11.947-0.853s4.267,8.533,0.853,11.947C176.493,224.28,164.547,229.4,152.6,229.4z" />
+                    c3.413-3.413,8.533-2.56,11.947,0.853c5.12,5.12,11.947,8.533,18.773,8.533c7.68,0,14.507-3.413,19.627-8.533
+                    c3.413-3.413,8.533-4.267,11.947-0.853s4.267,8.533,0.853,11.947C176.493,224.28,164.547,229.4,152.6,229.4z" />
                         <path
                             d="M255,511C114.2,511-1,395.8-1,255S114.2-1,255-1s256,115.2,256,256S395.8,511,255,511z M255,16.067
-            		C123.587,16.067,16.067,123.587,16.067,255S123.587,493.933,255,493.933S493.933,386.413,493.933,255S386.413,16.067,255,16.067z" />
+                    C123.587,16.067,16.067,123.587,16.067,255S123.587,493.933,255,493.933S493.933,386.413,493.933,255S386.413,16.067,255,16.067z" />
                         <path d="M255,391.533c-33.28,0-64.853-12.8-88.747-36.693c-3.413-3.413-3.413-8.533,0-11.947c3.413-3.413,8.533-3.413,11.947,0
-            		c20.48,20.48,47.787,31.573,76.8,31.573s56.32-11.093,76.8-31.573c3.413-3.413,8.533-3.413,11.947,0
-            		c3.413,3.413,3.413,8.533,0,11.947C319.853,378.733,288.28,391.533,255,391.533z" />
+                    c20.48,20.48,47.787,31.573,76.8,31.573s56.32-11.093,76.8-31.573c3.413-3.413,8.533-3.413,11.947,0
+                    c3.413,3.413,3.413,8.533,0,11.947C319.853,378.733,288.28,391.533,255,391.533z" />
                         <path d="M183.32,135.533c-1.707,0-3.413,0-4.267-0.853c-16.213-9.387-36.693-9.387-52.907,0c-4.267,2.56-9.387,0.853-11.947-2.56
-            		c-2.56-4.267-0.853-9.387,2.56-11.947c21.333-12.8,48.64-12.8,69.973,0c4.267,2.56,5.12,7.68,2.56,11.947
-            		C188.44,133.827,185.88,135.533,183.32,135.533z" />
+                    c-2.56-4.267-0.853-9.387,2.56-11.947c21.333-12.8,48.64-12.8,69.973,0c4.267,2.56,5.12,7.68,2.56,11.947
+                    C188.44,133.827,185.88,135.533,183.32,135.533z" />
                         <path d="M388.12,135.533c-1.707,0-3.413,0-4.267-0.853c-16.213-9.387-36.693-9.387-52.907,0c-4.267,2.56-9.387,0.853-11.947-2.56
-            		c-2.56-4.267-0.853-9.387,2.56-11.947c21.333-12.8,48.64-12.8,69.973,0c4.267,2.56,5.12,7.68,2.56,11.947
-            		C393.24,133.827,390.68,135.533,388.12,135.533z" />
+                    c-2.56-4.267-0.853-9.387,2.56-11.947c21.333-12.8,48.64-12.8,69.973,0c4.267,2.56,5.12,7.68,2.56,11.947
+                    C393.24,133.827,390.68,135.533,388.12,135.533z" />
                     </g>
                     <g>
                     </g>
@@ -168,16 +171,16 @@
                 </svg>
                 <!-- FIN SVG -->
             </label>
-            <div class="fondito" id="fondito"></div>
-        </h1>
-        <hr>
+            <!-- <div class="fondito" id="fondito"></div> -->
+        </div>
     </header>
+    <hr>
 
     <div class="container-fluid px-5 mb-2">
         <!-- inicio del form -->
         <form role="form1" id="form1" method="post">
-            <div class="card card-style-dark">
-                <div class="card-header card-header-dark">
+            <div class="card card-style">
+                <div class="card-header">
                     Filtro - Pacientes diarios
                 </div>
                 <div class="card-body">
@@ -187,7 +190,7 @@
                         <div class="col-sm-12 col-md-12 col-lg-3">
                             <div class="mb-3">
                                 <input type="hidden" name="reporte_nombre_establecimiento">
-                                <label for="reporte_codigo_establecimiento" class="form-label label-dark">Nombre del
+                                <label for="reporte_codigo_establecimiento" class="form-label">Nombre del
                                     Establecimiento:</label>
                                 <select class="form-select" id="reporte_codigo_establecimiento"
                                     name="reporte_codigo_establecimiento">
@@ -201,7 +204,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-3">
                             <div class="mb-3">
-                                <label for="startDate" class="form-label label-dark">Fecha de inicio:</label>
+                                <label for="startDate" class="form-label">Fecha de inicio:</label>
                                 <input type="date" class="form-control startDate" name="startDate" id="startDate">
                             </div>
                         </div>
@@ -210,7 +213,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-3">
                             <div class="mb-3">
-                                <label for="endDate" class="form-label label-dark">Fecha de fin:</label>
+                                <label for="endDate" class="form-label">Fecha de fin:</label>
                                 <input type="date" class="form-control endDate" name="endDate" id="endDate">
                             </div>
                         </div>
@@ -218,23 +221,23 @@
                     <!-- Sexo del paciente -->
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-4">
-                            <label class="form-label label-dark">Sexo del paciente:</label>
+                            <label id="label_sexo" class="form-label">Sexo del paciente:</label>
                             <div class="mb-3">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="sexo" id="sexo_t" value="3" checked="checked">
-                                    <label class="form-check-label label-dark" for="sexo_t">Todos</label>
+                                    <label class="form-check-label" for="sexo_t">Todos</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="sexo" id="sexo_m" value="2">
-                                    <label class="form-check-label label-dark" for="inlineRadio2">Masculino</label>
+                                    <label class="form-check-label" for="inlineRadio2">Masculino</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="sexo" id="sexo_f" value="1">
-                                    <label class="form-check-label label-dark" for="sexo_f">Femenino</label>
+                                    <label class="form-check-label" for="sexo_f">Femenino</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="sexo" id="sexo_i" value="0">
-                                    <label class="form-check-label label-dark" for="sexo_i">Indeterminado</label>
+                                    <label class="form-check-label" for="sexo_i">Indeterminado</label>
                                 </div>
                             </div>
                         </div>
@@ -251,10 +254,10 @@
             </div>
         </form>
         <!-- Fin del form -->
-        <div class="card mt-2 border-light card-style-dark">
-            <div class="card-header card-header-dark">Reporte pacientes por día - Fecha:</div>
+        <div class="card mt-2 border-light">
+            <div class="card-header">Reporte pacientes por día - Fecha:</div>
             <div class="card-body">
-                <table class="table table-hover table-dark" id="dataTables">
+                <table class="table table-hover" id="dataTables">
                     <thead>
                         <tr>
                             <th scope="col">Fecha de consultas</th>
@@ -294,6 +297,7 @@
 
 
     <script src="./bower_components/bootstrap-3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/reporte.js"></script>
 </body>
 
 </html>

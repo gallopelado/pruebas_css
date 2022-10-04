@@ -47,8 +47,8 @@
 }
 
 .fondito {
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
+    height: 50vh;
     background: #fff;
     z-index: -1;
     position: absolute;
@@ -59,10 +59,12 @@
     background: #403d3d;
 }
 
-
+/* 
+    Se adjuntan las clases adyacentes(una abajo de otra) y si está checked
+    se cambia el background de fondito
+ */
 #darkmode-toggle:checked + #sw-dark-label {
-    /* background: #242424; */
-    background: #c1c0c0
+    background: #1889f388
 }
 
 /* otros */

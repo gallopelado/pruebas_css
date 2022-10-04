@@ -1,0 +1,60 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector('#wrapper')
+    const check = document.querySelector('#darkmode-toggle')
+    const navbar_menu = document.querySelector('#navbar_menu')
+    const h1_rep = document.querySelector('#h1_rep')
+    const card = document.querySelectorAll('.card')
+    const card_header = document.querySelectorAll('.card-header')
+    const table = document.querySelector('.table')
+    const label_sexo = document.querySelector('#label_sexo')
+    const form_check_label = document.querySelectorAll('.form-check-label')
+    const form_label = document.querySelectorAll('.form-label ')
+
+    check.addEventListener('change', e => {
+        console.log(e.target.checked)
+        if(e.target.checked) {
+            h1_rep.classList.remove('h1')
+            h1_rep.classList.add('h1-dark')
+            navbar_menu.classList.remove('navbar-his')
+            navbar_menu.classList.add('navbar-his-dark')
+            label_sexo.classList.remove('label')
+            label_sexo.classList.add('label-dark')
+            wrapper.classList.add('wrapper-dark')
+            wrapper.classList.remove('wrapper')
+            card.forEach(item => {
+                item.classList.remove('card-style')
+                item.classList.add('card-style-dark')
+            })
+            table.classList.add('table-dark')
+            
+            card_header.forEach(item => {
+                item.classList.add('card-header-dark')
+                item.classList.add('border-light')
+                item.classList.remove('border-dark')
+            })
+            form_check_label.forEach(item => item.classList.add('label-dark'))
+            form_label.forEach(item => item.classList.add('label-dark'))
+        } else {
+            h1_rep.classList.add('h1')
+            h1_rep.classList.remove('h1-dark')
+            navbar_menu.classList.add('navbar-his')
+            navbar_menu.classList.remove('navbar-his-dark')
+            label_sexo.classList.remove('label-dark')
+            label_sexo.classList.add('label')
+            wrapper.classList.add('wrapper')
+            wrapper.classList.remove('wrapper-dark')
+            card.forEach(item => {
+                item.classList.remove('card-style-dark')
+                item.classList.add('card-style')
+            })
+            card_header.forEach(item => {
+                item.classList.remove('card-header-dark')
+                item.classList.remove('border-light')
+                item.classList.add('border-dark')
+            })
+            table.classList.remove('table-dark')
+            form_check_label.forEach(item => item.classList.remove('label-dark'))
+            form_label.forEach(item => item.classList.remove('label-dark'))
+        }
+    })
+})
